@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Ridhima</title>
+    <meta
+      name="description"
+      content="A little surprise made with all my love."
+    />
+
+    <!-- Fonts: Playfair Display (serif headings) + Jost (modern sans body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ============ PRELOADER ============ -->
+    <div id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <span class="preloader-monogram">R</span>
+        <p class="preloader-text">
+          loading something special<span class="dots"
+            ><span>.</span><span>.</span><span>.</span></span
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- ============ CUSTOM CURSOR (desktop only, via CSS/JS) ============ -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ============ SCROLL PROGRESS ============ -->
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollProgressBar"></span>
+    </div>
+
+    <main id="mainContent">
+      <!-- ============ 1. HERO ============ -->
+      <section id="hero" class="hero" aria-label="Welcome">
+        <div
+          class="hero-media"
+          role="img"
+          aria-label="Warm, softly lit background photo"
+        ></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow reveal-up">for someone very special</p>
+          <h1 class="hero-title">
+            <span class="reveal-up" style="--d: 1">Happy Birthday</span>
+            <span class="reveal-up hero-title-name" style="--d: 2"
+              >Santaraaaaa <span class="heart">&#10084;</span></span
+            >
+          </h1>
+          <p class="hero-subtitle reveal-up" style="--d: 3">
+            A little surprise made with all my love&hellip;
+          </p>
+          <button
+            class="btn btn-luxury magnetic reveal-up"
+            id="beginStoryBtn"
+            style="--d: 4"
+          >
+            <span>Begin Our Story</span>
+          </button>
+        </div>
+        <button
+          class="scroll-indicator magnetic"
+          id="scrollIndicator"
+          aria-label="Scroll to explore"
+        >
+          <span class="scroll-indicator-line"></span>
+          <span class="scroll-indicator-text">scroll</span>
+        </button>
+      </section>
+
+      <!-- ============ 2. OUR STORY ============ -->
+      <section id="our-story" class="story" aria-labelledby="story-heading">
+        <p class="eyebrow">the journey so far</p>
+        <h2 id="story-heading" class="section-title">Our Story</h2>
+
+        <div class="timeline">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <article class="timeline-card">
+            <div class="timeline-card-bg" style="background-image: url('assets/images/storyOne.jpeg');"></div>
+            <span class="timeline-icon" aria-hidden="true"
+              >&#10084;&#65039;</span
+            >
+            <h3>We Met</h3>
+            <p>
+              The day that quietly changed everything, though neither of us knew
+              it yet.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-card-bg" style="background-image: url('assets/images/story2.jpeg');"></div>
+            <span class="timeline-icon" aria-hidden="true">&#128522;</span>
+            <h3>We Started Talking</h3>
+            <p>
+              Messages that were supposed to last five minutes and never did.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-card-bg" style="background-image: url('assets/images/storyThree.jpeg');"></div>
+            <span class="timeline-icon" aria-hidden="true">&#127804;</span>
+            <h3>First Memory</h3>
+            <p>The one we still bring up, always with the same smile.</p>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-card-bg" style="background-image: url('assets/images/story4.jpeg');"></div>
+            <span class="timeline-icon" aria-hidden="true">&#128514;</span>
+            <h3>Endless Laughs</h3>
+            <p>
+              Every day since, somehow finding a new reason to laugh together.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <div class="timeline-card-bg" style="background-image: url('assets/images/storyFive.jpeg');"></div>
+            <span class="timeline-icon" aria-hidden="true">&#128155;</span>
+            <h3>Today</h3>
+            <p>
+              Right here, celebrating you &mdash; still the best part of my
+              story.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ 3. MEMORY GALLERY ============ -->
+      <section id="gallery" class="gallery" aria-labelledby="gallery-heading">
+        <p class="eyebrow">a few favourites</p>
+        <h2 id="gallery-heading" class="section-title">Memory Gallery</h2>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Replace each src with your own photo in assets/images/ (e.g. gallery-1.jpg) -->
+          <button
+            class="gallery-item magnetic"
+            data-index="0"
+            aria-label="Open photo 1 of 6"
+          >
+            <img
+              src="assets/images/gallery-1.jpeg"
+              alt="A memory together"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('img-missing')"
+            />
+            <span class="gallery-placeholder-label">add a photo</span>
+          </button>
+          <button
+            class="gallery-item magnetic"
+            data-index="1"
+            aria-label="Open photo 2 of 6"
+          >
+            <img
+              src="assets/images/gallery-2.jpeg"
+              alt="A memory together"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('img-missing')"
+            />
+            <span class="gallery-placeholder-label">add a photo</span>
+          </button>
+          <button
+            class="gallery-item magnetic"
+            data-index="2"
+            aria-label="Open photo 3 of 6"
+          >
+            <img
+              src="assets/images/gallery-3.jpeg"
+              alt="A memory together"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('img-missing')"
+            />
+            <span class="gallery-placeholder-label">add a photo</span>
+          </button>
+          <button
+            class="gallery-item magnetic"
+            data-index="3"
+            aria-label="Open photo 4 of 6"
+          >
+            <img
+              src="assets/images/gallery-4.jpeg"
+              alt="A memory together"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('img-missing')"
+            />
+            <span class="gallery-placeholder-label">add a photo</span>
+          </button>
+          <button
+            class="gallery-item magnetic"
+            data-index="4"
+            aria-label="Open photo 5 of 6"
+          >
+            <img
+              src="assets/images/gallery-5.jpeg"
+              alt="A memory together"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('img-missing')"
+            />
+            <span class="gallery-placeholder-label">add a photo</span>
+          </button>
+          <button
+            class="gallery-item magnetic"
+            data-index="5"
+            aria-label="Open photo 6 of 6"
+          >
+            <img
+              src="assets/images/gallery-6.jpeg"
+              alt="A memory together"
+              loading="lazy"
+              onerror="this.parentElement.classList.add('img-missing')"
+            />
+            <span class="gallery-placeholder-label">add a photo</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ============ 4. FAVOURITE MOMENTS (flip cards) ============ -->
+      <section id="moments" class="moments" aria-labelledby="moments-heading">
+        <p class="eyebrow">the little things</p>
+        <h2 id="moments-heading" class="section-title">Favourite Moments</h2>
+
+        <div class="flip-grid">
+          <div
+            class="flip-card"
+            tabindex="0"
+            role="button"
+            aria-label="Favourite Sunset, flip for details"
+          >
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <span aria-hidden="true">&#127949;</span>
+                <h3>Best Ride</h3>
+              </div>
+              <div class="flip-face flip-back">
+                <p>
+                  @147, That fearless ride. That was a stress releasing ride.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flip-card"
+            tabindex="0"
+            role="button"
+            aria-label="Favourite Coffee Date, flip for details"
+          >
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <span aria-hidden="true">&#129730;</span>
+                <h3>First Hug</h3>
+              </div>
+              <div class="flip-face flip-back">
+                <p>
+                  Special Road, The first time we thaught there is something
+                  spacial between us
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flip-card"
+            tabindex="0"
+            role="button"
+            aria-label="Movie Night, flip for details"
+          >
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <span aria-hidden="true">&#128144</span>
+                <h3>First Bouquet</h3>
+              </div>
+              <div class="flip-face flip-back">
+                <p>
+                  Alpha 2, Nagori, You gave me the first flowers of my life &
+                  that was very special for me.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flip-card"
+            tabindex="0"
+            role="button"
+            aria-label="Favourite Birthday Memory, flip for details"
+          >
+            <div class="flip-card-inner">
+              <div class="flip-face flip-front">
+                <span aria-hidden="true">&#127916;</span>
+                <h3>Movie Night</h3>
+              </div>
+              <div class="flip-face flip-back">
+                <p>
+                  Remember Dhurandhar 2, I think thats the night we came
+                  together again
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. REASONS I LOVE YOU ============ -->
+      <section id="reasons" class="reasons" aria-labelledby="reasons-heading">
+        <p class="eyebrow">a short, incomplete list</p>
+        <h2 id="reasons-heading" class="section-title">Reasons I Love You</h2>
+
+        <div class="reasons-grid">
+          <div class="reason-card">
+            <span class="reason-icon" aria-hidden="true">&#127968;</span>
+            <h3>Your Feel Like Home</h3>
+          </div>
+          <div class="reason-card">
+            <span class="reason-icon" aria-hidden="true">&#128524;</span>
+            <h3>Your voice calms my herat</h3>
+          </div>
+          <div class="reason-card">
+            <span class="reason-icon" aria-hidden="true">&#129505;</span>
+            <h3>You showed what real love is...</h3>
+          </div>
+          <div class="reason-card">
+            <span class="reason-icon" aria-hidden="true">&#10024;</span>
+            <h3>Every moment feels very specian & precious with you</h3>
+          </div>
+          <div class="reason-card">
+            <span class="reason-icon" aria-hidden="true">&#128107;</span>
+            <h3>The way you hold us after every argumment</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6. INTERACTIVE LETTER ============ -->
+      <section
+        id="letter"
+        class="letter-section"
+        aria-labelledby="letter-heading"
+      >
+        <p class="eyebrow">the most important part</p>
+        <h2 id="letter-heading" class="section-title">A Letter For You</h2>
+
+        <div class="envelope-wrap">
+          <button
+            class="envelope"
+            id="envelopeBtn"
+            aria-label="Open the letter"
+            aria-expanded="false"
+          >
+            <span class="envelope-flap"></span>
+            <span class="envelope-body"></span>
+            <span class="envelope-seal">&#10084;</span>
+          </button>
+
+          <div class="letter-paper" id="letterPaper" aria-hidden="true">
+            <div class="letter-text" id="letterText">
+              <!-- Filled by JS from CONFIG.letterLines in script.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 7. MUSIC PLAYER ============ -->
+      <section
+        id="music-player"
+        class="music-section"
+        aria-labelledby="music-heading"
+      >
+        <p class="eyebrow">Santaraaaaa, Aap Ho Toh Sab Acha Hai</p>
+        <h2 id="music-heading" class="section-title">Now Playing</h2>
+
+        <div class="player">
+          <div class="player-cover">
+            <!-- Replace with your own album art: assets/images/album-cover.jpg -->
+            <img
+              src="assets/images/album-cover.jpeg"
+              alt="Album art for the song"
+              onerror="this.parentElement.classList.add('img-missing')"
+            />
+          </div>
+          <div class="player-info">
+            <p class="player-song">Tum Ho Toh</p>
+            <p class="player-movie">Saiyaara</p>
+
+            <div class="player-controls">
+              <button
+                class="player-play magnetic"
+                id="playPauseBtn"
+                aria-label="Play song"
+              >
+                <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <svg
+                  class="icon-pause"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  hidden
+                >
+                  <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
+                </svg>
+              </button>
+
+              <div class="player-seek-wrap">
+                <span class="player-time" id="currentTime">0:00</span>
+                <input
+                  type="range"
+                  id="seekBar"
+                  class="player-seek"
+                  value="0"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  aria-label="Seek"
+                />
+                <span class="player-time" id="durationTime">0:00</span>
+              </div>
+
+              <div class="player-volume-wrap">
+                <svg class="icon-volume" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 10v4h4l5 5V5L7 10H3z" />
+                </svg>
+                <input
+                  type="range"
+                  id="volumeBar"
+                  class="player-volume"
+                  value="70"
+                  min="0"
+                  max="100"
+                  step="1"
+                  aria-label="Volume"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add your own mp3 file at assets/music/song.mp3 -->
+        <audio
+          id="bgMusic"
+          src="assets/music/song.mp3"
+          preload="metadata"
+          loop
+        ></audio>
+      </section>
+
+      <!-- ============ 8. LUXURY GIFT BOX ============ -->
+      <section id="gift" class="gift-section" aria-labelledby="gift-heading">
+        <p class="eyebrow">one more thing</p>
+        <h2 id="gift-heading" class="section-title">A Little Gift</h2>
+
+        <div class="gift-wrap">
+          <button class="gift-box" id="giftBoxBtn" aria-label="Open your gift">
+            <span class="gift-lid"></span>
+            <span class="gift-ribbon-v"></span>
+            <span class="gift-ribbon-h"></span>
+            <span class="gift-bow"></span>
+            <span class="gift-base"></span>
+          </button>
+          <div class="gift-confetti" id="giftConfetti" aria-hidden="true"></div>
+          <p class="gift-message" id="giftMessage">
+            Happy Birthday Love &#10084;&#65039;
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 9. FINAL PROMISE ============ -->
+      <section
+        id="promise"
+        class="promise-section"
+        aria-labelledby="promise-heading"
+      >
+        <h2 id="promise-heading" class="sr-only">Final Promise</h2>
+        <blockquote class="promise-quote">
+          <p class="reveal-up" style="--d: 1">I am not letting you go</p>
+          <p class="reveal-up" style="--d: 2">Abhi nahi, Kabhi nahi</p>
+          <p class="reveal-up" style="--d: 3">Forever & ever & ever...</p>
+          <p class="reveal-up promise-forever" style="--d: 4">Forever.</p>
+        </blockquote>
+        <p class="promise-line reveal-up" style="--d: 5">
+          Always your's Nikhil &#10084;&#65039;
+        </p>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <p>Made with &#10084;&#65039; only for Ridhima</p>
+      <p class="footer-date">10 &bull; 08 &bull; 2026</p>
+    </footer>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Photo viewer"
+      hidden
+    >
+      <button
+        class="lightbox-close magnetic"
+        id="lightboxClose"
+        aria-label="Close"
+      >
+        &times;
+      </button>
+      <button
+        class="lightbox-prev magnetic"
+        id="lightboxPrev"
+        aria-label="Previous photo"
+      >
+        &#10094;
+      </button>
+      <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+      <button
+        class="lightbox-next magnetic"
+        id="lightboxNext"
+        aria-label="Next photo"
+      >
+        &#10095;
+      </button>
+      <p class="lightbox-counter" id="lightboxCounter">1 / 6</p>
+    </div>
+
+    <!-- GSAP (animation engine) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
